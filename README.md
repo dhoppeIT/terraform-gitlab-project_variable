@@ -12,7 +12,7 @@ specify the required variables and run the command `terraform init`.
 ```hcl
 module "gitlab_project_access_token" {
   source  = "gitlab.com/terraform-child-modules-48151/terraform-gitlab-project-access-token/local"
-  version = "1.0.0"
+  version = "2.0.0"
 
   project = "example-group-48165/example-project"
   name    = "example-access-token"
@@ -21,7 +21,7 @@ module "gitlab_project_access_token" {
 
 module "gitlab_project_variable" {
   source  = "gitlab.com/terraform-child-modules-48151/terraform-gitlab-project-variable/local"
-  version = "1.1.0"
+  version = "2.0.0"
 
   project = "example-group-48165/example-project"
   key     = "example-key"
@@ -35,15 +35,15 @@ module "gitlab_project_variable" {
 ## Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
-| <a name="requirement_gitlab"></a> [gitlab](#requirement\_gitlab) | ~> 18.0 |
+| <a name="requirement_gitlab"></a> [gitlab](#requirement\_gitlab) | ~> 19.0 |
 
 ## Providers
 
 | Name | Version |
-|------|---------|
-| <a name="provider_gitlab"></a> [gitlab](#provider\_gitlab) | ~> 18.0 |
+| ---- | ------- |
+| <a name="provider_gitlab"></a> [gitlab](#provider\_gitlab) | ~> 19.0 |
 
 ## Modules
 
@@ -52,13 +52,13 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [gitlab_project_variable.this](https://registry.terraform.io/providers/gitlabhq/gitlab/latest/docs/resources/project_variable) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_description"></a> [description](#input\_description) | The description of the variable | `string` | `null` | no |
 | <a name="input_environment_scope"></a> [environment\_scope](#input\_environment\_scope) | The environment scope of the variable | `string` | `"*"` | no |
 | <a name="input_hidden"></a> [hidden](#input\_hidden) | If set to true, the value of the variable will be hidden in the CI/CD User Interface | `bool` | `false` | no |
@@ -73,7 +73,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_id"></a> [id](#output\_id) | The ID of this resource |
 <!-- END_TF_DOCS -->
 

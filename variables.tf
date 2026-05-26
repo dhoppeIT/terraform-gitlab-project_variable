@@ -10,6 +10,7 @@ variable "project" {
 
 variable "value" {
   type        = string
+  sensitive   = true
   description = "The value of the variable"
 }
 
@@ -55,7 +56,7 @@ variable "variable_type" {
   description = "The type of a variable"
 
   validation {
-    condition     = contains(["env_var", "fiile"], var.variable_type)
+    condition     = contains(["env_var", "file"], var.variable_type)
     error_message = "Valid values are env_var, file"
   }
 }
